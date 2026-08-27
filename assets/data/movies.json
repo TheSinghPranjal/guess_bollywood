@@ -1,0 +1,1504 @@
+{
+  "movies": [
+    {
+      "id": "bollywood_001",
+      "title": "Agneepath",
+      "industry": "bollywood",
+      "year": 1990,
+      "cast": ["Amitabh Bachchan", "Mithun Chakraborty"],
+      "about": "A boy grows into a ruthless don to avenge his father's death.",
+      "hints": [
+        "It stars Amitabh Bachchan and Mithun Chakraborty.",
+        "A boy grows into a ruthless don to avenge his father's death.",
+        "It was released in 1990.",
+        "It is a Bollywood crime drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_002",
+      "title": "Dil",
+      "industry": "bollywood",
+      "year": 1990,
+      "cast": ["Aamir Khan", "Madhuri Dixit"],
+      "about": "A passionate young man falls for a woman from a rival family.",
+      "hints": [
+        "It stars Aamir Khan and Madhuri Dixit.",
+        "A passionate young man falls for a woman from a rival family.",
+        "It was released in 1990.",
+        "It is a Bollywood romance."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_003",
+      "title": "Ghayal",
+      "industry": "bollywood",
+      "year": 1990,
+      "cast": ["Sunny Deol", "Meenakshi Seshadri"],
+      "about": "An athlete turns vigilante after his brother is murdered.",
+      "hints": [
+        "It stars Sunny Deol and Meenakshi Seshadri.",
+        "An athlete turns vigilante after his brother is murdered.",
+        "It was released in 1990.",
+        "It is a Bollywood action drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_004",
+      "title": "Dil Hai Ke Manta Nahin",
+      "industry": "bollywood",
+      "year": 1991,
+      "cast": ["Aamir Khan", "Pooja Bhatt"],
+      "about": "A runaway bride and a struggling filmmaker clash then fall in love.",
+      "hints": [
+        "It stars Aamir Khan and Pooja Bhatt.",
+        "A runaway bride and a struggling filmmaker clash then fall in love.",
+        "It was released in 1991.",
+        "It is a Bollywood romantic comedy."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_005",
+      "title": "Hum",
+      "industry": "bollywood",
+      "year": 1991,
+      "cast": ["Amitabh Bachchan", "Rajinikanth", "Govinda"],
+      "about": "Brothers reunite years later to confront a powerful criminal.",
+      "hints": [
+        "It stars Amitabh Bachchan, Rajinikanth and Govinda.",
+        "Brothers reunite years later to confront a powerful criminal.",
+        "It was released in 1991.",
+        "It is a Bollywood action drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_006",
+      "title": "Lamhe",
+      "industry": "bollywood",
+      "year": 1991,
+      "cast": ["Anil Kapoor", "Sridevi"],
+      "about": "A man grapples with feelings spanning two generations of closely linked women.",
+      "hints": [
+        "It stars Anil Kapoor and Sridevi.",
+        "A man grapples with feelings spanning two generations of closely linked women.",
+        "It was released in 1991.",
+        "It is a Bollywood romance drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_007",
+      "title": "Phool Aur Kaante",
+      "industry": "bollywood",
+      "year": 1991,
+      "cast": ["Ajay Devgn", "Madhoo"],
+      "about": "A gangster's son falls for a woman while battling rivals.",
+      "hints": [
+        "It stars Ajay Devgn and Madhoo.",
+        "A gangster's son falls for a woman while battling rivals.",
+        "It was released in 1991.",
+        "It is a Bollywood action romance."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_008",
+      "title": "Saajan",
+      "industry": "bollywood",
+      "year": 1991,
+      "cast": ["Salman Khan", "Sanjay Dutt", "Madhuri Dixit"],
+      "about": "Two friends love the same woman while one hides behind anonymous poetry.",
+      "hints": [
+        "It stars Salman Khan, Sanjay Dutt and Madhuri Dixit.",
+        "Two friends love the same woman while one hides behind anonymous poetry.",
+        "It was released in 1991.",
+        "It is a Bollywood romance."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_009",
+      "title": "Beta",
+      "industry": "bollywood",
+      "year": 1992,
+      "cast": ["Anil Kapoor", "Madhuri Dixit", "Aruna Irani"],
+      "about": "A devoted son is manipulated by a scheming stepmother.",
+      "hints": [
+        "It stars Anil Kapoor, Madhuri Dixit and Aruna Irani.",
+        "A devoted son is manipulated by a scheming stepmother.",
+        "It was released in 1992.",
+        "It is a Bollywood family drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_010",
+      "title": "Bol Radha Bol",
+      "industry": "bollywood",
+      "year": 1992,
+      "cast": ["Rishi Kapoor", "Juhi Chawla"],
+      "about": "A man returns home to find an impostor claiming his identity.",
+      "hints": [
+        "It stars Rishi Kapoor and Juhi Chawla.",
+        "A man returns home to find an impostor claiming his identity.",
+        "It was released in 1992.",
+        "It is a Bollywood romantic thriller."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_011",
+      "title": "Deewana",
+      "industry": "bollywood",
+      "year": 1992,
+      "cast": ["Shahrukh Khan", "Rishi Kapoor", "Divya Bharti"],
+      "about": "A young poet becomes obsessed with a married woman.",
+      "hints": [
+        "It stars Shahrukh Khan, Rishi Kapoor and Divya Bharti.",
+        "A young poet becomes obsessed with a married woman.",
+        "It was released in 1992.",
+        "It is a Bollywood romance."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_012",
+      "title": "Jo Jeeta Wohi Sikandar",
+      "industry": "bollywood",
+      "year": 1992,
+      "cast": ["Aamir Khan", "Ayesha Jhulka"],
+      "about": "A carefree student matures while chasing a college cycling trophy.",
+      "hints": [
+        "It stars Aamir Khan and Ayesha Jhulka.",
+        "A carefree student matures while chasing a college cycling trophy.",
+        "It was released in 1992.",
+        "It is a Bollywood sports drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_013",
+      "title": "Baazigar",
+      "industry": "bollywood",
+      "year": 1993,
+      "cast": ["Shahrukh Khan", "Kajol", "Shilpa Shetty"],
+      "about": "A charming man plots revenge against a wealthy family.",
+      "hints": [
+        "It stars Shahrukh Khan, Kajol and Shilpa Shetty.",
+        "A charming man plots revenge against a wealthy family.",
+        "It was released in 1993.",
+        "It is a Bollywood thriller."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_014",
+      "title": "Damini",
+      "industry": "bollywood",
+      "year": 1993,
+      "cast": ["Meenakshi Seshadri", "Rishi Kapoor", "Sunny Deol"],
+      "about": "A woman fights for justice after witnessing a brutal crime.",
+      "hints": [
+        "It stars Meenakshi Seshadri, Rishi Kapoor and Sunny Deol.",
+        "A woman fights for justice after witnessing a brutal crime.",
+        "It was released in 1993.",
+        "It is a Bollywood courtroom drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_015",
+      "title": "Darr",
+      "industry": "bollywood",
+      "year": 1993,
+      "cast": ["Shahrukh Khan", "Juhi Chawla", "Sunny Deol"],
+      "about": "A woman is stalked by an obsessive admirer.",
+      "hints": [
+        "It stars Shahrukh Khan, Juhi Chawla and Sunny Deol.",
+        "A woman is stalked by an obsessive admirer.",
+        "It was released in 1993.",
+        "It is a Bollywood psychological thriller."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_016",
+      "title": "Khalnayak",
+      "industry": "bollywood",
+      "year": 1993,
+      "cast": ["Sanjay Dutt", "Madhuri Dixit", "Jackie Shroff"],
+      "about": "A policewoman goes undercover to capture a dangerous outlaw.",
+      "hints": [
+        "It stars Sanjay Dutt, Madhuri Dixit and Jackie Shroff.",
+        "A policewoman goes undercover to capture a dangerous outlaw.",
+        "It was released in 1993.",
+        "It is a Bollywood action drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_017",
+      "title": "Hum Aapke Hain Koun",
+      "industry": "bollywood",
+      "year": 1994,
+      "cast": ["Salman Khan", "Madhuri Dixit"],
+      "about": "Two families bond through marriage while a quiet romance blooms.",
+      "hints": [
+        "It stars Salman Khan and Madhuri Dixit.",
+        "Two families bond through marriage while a quiet romance blooms.",
+        "It was released in 1994.",
+        "It is a Bollywood family romance."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_018",
+      "title": "Kabhi Haan Kabhi Naa",
+      "industry": "bollywood",
+      "year": 1994,
+      "cast": ["Shahrukh Khan", "Suchitra Pillai"],
+      "about": "A lovable loser keeps failing at love and music but never gives up.",
+      "hints": [
+        "It stars Shahrukh Khan and Suchitra Pillai.",
+        "A lovable loser keeps failing at love and music but never gives up.",
+        "It was released in 1994.",
+        "It is a Bollywood romantic comedy."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_019",
+      "title": "Krantiveer",
+      "industry": "bollywood",
+      "year": 1994,
+      "cast": ["Nana Patekar", "Dimple Kapadia"],
+      "about": "A fiery activist stands up to local goons and corrupt leaders.",
+      "hints": [
+        "It stars Nana Patekar and Dimple Kapadia.",
+        "A fiery activist stands up to local goons and corrupt leaders.",
+        "It was released in 1994.",
+        "It is a Bollywood political drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_020",
+      "title": "Dilwale Dulhania Le Jayenge",
+      "industry": "bollywood",
+      "year": 1995,
+      "cast": ["Shahrukh Khan", "Kajol"],
+      "about": "Two young travelers fall in love on a Europe trip and fight for family approval.",
+      "hints": [
+        "It stars Shahrukh Khan and Kajol.",
+        "Two young travelers fall in love on a Europe trip and fight for family approval.",
+        "It was released in 1995.",
+        "It is a Bollywood romance."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_021",
+      "title": "Karan Arjun",
+      "industry": "bollywood",
+      "year": 1995,
+      "cast": ["Salman Khan", "Shahrukh Khan", "Kajol"],
+      "about": "A mother believes her murdered sons have returned for justice.",
+      "hints": [
+        "It stars Salman Khan, Shahrukh Khan and Kajol.",
+        "A mother believes her murdered sons have returned for justice.",
+        "It was released in 1995.",
+        "It is a Bollywood action drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_022",
+      "title": "Rangeela",
+      "industry": "bollywood",
+      "year": 1995,
+      "cast": ["Aamir Khan", "Urmila Matondkar", "Jackie Shroff"],
+      "about": "A street-smart dreamer loves a rising actress caught between two worlds.",
+      "hints": [
+        "It stars Aamir Khan, Urmila Matondkar and Jackie Shroff.",
+        "A street-smart dreamer loves a rising actress caught between two worlds.",
+        "It was released in 1995.",
+        "It is a Bollywood romantic drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_023",
+      "title": "Kuch Kuch Hota Hai",
+      "industry": "bollywood",
+      "year": 1998,
+      "cast": ["Shahrukh Khan", "Kajol", "Rani Mukerji"],
+      "about": "A widower rediscovers first love through his daughter's matchmaking.",
+      "hints": [
+        "It stars Shahrukh Khan, Kajol and Rani Mukerji.",
+        "A widower rediscovers first love through his daughter's matchmaking.",
+        "It was released in 1998.",
+        "It is a Bollywood romance."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_024",
+      "title": "Satya",
+      "industry": "bollywood",
+      "year": 1998,
+      "cast": ["J.D. Chakravarthy", "Urmila Matondkar", "Manoj Bajpayee"],
+      "about": "An outsider rises through Mumbai's underworld with tragic consequences.",
+      "hints": [
+        "It stars J.D. Chakravarthy, Urmila Matondkar and Manoj Bajpayee.",
+        "An outsider rises through Mumbai's underworld with tragic consequences.",
+        "It was released in 1998.",
+        "It is a Bollywood crime drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_025",
+      "title": "Pyaar Kiya To Darna Kya",
+      "industry": "bollywood",
+      "year": 1998,
+      "cast": ["Salman Khan", "Kajol", "Arbaaz Khan"],
+      "about": "A college romance is threatened by a controlling older brother.",
+      "hints": [
+        "It stars Salman Khan, Kajol and Arbaaz Khan.",
+        "A college romance is threatened by a controlling older brother.",
+        "It was released in 1998.",
+        "It is a Bollywood romantic thriller."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_026",
+      "title": "Sarfarosh",
+      "industry": "bollywood",
+      "year": 1999,
+      "cast": ["Aamir Khan", "Sonali Bendre", "Naseeruddin Shah"],
+      "about": "A determined officer hunts a cross-border arms network.",
+      "hints": [
+        "It stars Aamir Khan, Sonali Bendre and Naseeruddin Shah.",
+        "A determined officer hunts a cross-border arms network.",
+        "It was released in 1999.",
+        "It is a Bollywood cop thriller."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_027",
+      "title": "Hum Dil De Chuke Sanam",
+      "industry": "bollywood",
+      "year": 1999,
+      "cast": ["Salman Khan", "Ajay Devgn", "Aishwarya Rai"],
+      "about": "A newlywed is torn between arranged marriage duty and earlier love.",
+      "hints": [
+        "It stars Salman Khan, Ajay Devgn and Aishwarya Rai.",
+        "A newlywed is torn between arranged marriage duty and earlier love.",
+        "It was released in 1999.",
+        "It is a Bollywood romance drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_028",
+      "title": "Hum Saath Saath Hain",
+      "industry": "bollywood",
+      "year": 1999,
+      "cast": ["Salman Khan", "Karisma Kapoor", "Saif Ali Khan", "Tabu"],
+      "about": "A joint family's harmony is threatened by misunderstanding and envy.",
+      "hints": [
+        "It stars Salman Khan, Karisma Kapoor, Saif Ali Khan and Tabu.",
+        "A joint family's harmony is threatened by misunderstanding and envy.",
+        "It was released in 1999.",
+        "It is a Bollywood family drama."
+      ],
+      "era": "1990-1999"
+    },
+    {
+      "id": "bollywood_029",
+      "title": "Dhadkan",
+      "industry": "bollywood",
+      "year": 2000,
+      "cast": ["Akshay Kumar", "Shilpa Shetty", "Suniel Shetty"],
+      "about": "A woman married for duty still carries feelings for her past love.",
+      "hints": [
+        "It stars Akshay Kumar, Shilpa Shetty and Suniel Shetty.",
+        "A woman married for duty still carries feelings for her past love.",
+        "It was released in 2000.",
+        "It is a Bollywood romance drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_030",
+      "title": "Stree",
+      "industry": "bollywood",
+      "year": 2024,
+      "cast": ["Shraddha Kapoor", "Rajkummar Rao"],
+      "about": "A small town faces mysterious disappearances blamed on a female spirit.",
+      "hints": [
+        "It stars Shraddha Kapoor and Rajkummar Rao.",
+        "A small town faces mysterious disappearances blamed on a female spirit.",
+        "It was released in 2024.",
+        "It is a Bollywood horror comedy."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_031",
+      "title": "Mission Kashmir",
+      "industry": "bollywood",
+      "year": 2000,
+      "cast": ["Hrithik Roshan", "Sanjay Dutt", "Preity Zinta"],
+      "about": "An orphaned boy raised by a cop is torn between affection and revenge.",
+      "hints": [
+        "It stars Hrithik Roshan, Sanjay Dutt and Preity Zinta.",
+        "An orphaned boy raised by a cop is torn between affection and revenge.",
+        "It was released in 2000.",
+        "It is a Bollywood political thriller."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_032",
+      "title": "Fighter",
+      "industry": "bollywood",
+      "year": 2024,
+      "cast": ["Hrithik Roshan", "Deepika Padukone", "Anil Kapoor"],
+      "about": "An Indian Air Force squadron battles threats after a terrorist attack.",
+      "hints": [
+        "It stars Hrithik Roshan, Deepika Padukone and Anil Kapoor.",
+        "An Indian Air Force squadron battles threats after a terrorist attack.",
+        "It was released in 2024.",
+        "It is a Bollywood action thriller."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_033",
+      "title": "Lagaan",
+      "industry": "bollywood",
+      "year": 2001,
+      "cast": ["Aamir Khan", "Gracy Singh", "Rachel Shelley"],
+      "about": "Villagers accept a cricket challenge to escape an unfair tax.",
+      "hints": [
+        "It stars Aamir Khan, Gracy Singh and Rachel Shelley.",
+        "Villagers accept a cricket challenge to escape an unfair tax.",
+        "It was released in 2001.",
+        "It is a Bollywood sports drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_034",
+      "title": "Kabhi Khushi Kabhie Gham",
+      "industry": "bollywood",
+      "year": 2001,
+      "cast": ["Shahrukh Khan", "Kajol", "Amitabh Bachchan", "Hrithik Roshan"],
+      "about": "A wealthy family is divided when a son marries against his father's wish.",
+      "hints": [
+        "It stars Shahrukh Khan, Kajol, Amitabh Bachchan and Hrithik Roshan.",
+        "A wealthy family is divided when a son marries against his father's wish.",
+        "It was released in 2001.",
+        "It is a Bollywood family drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_035",
+      "title": "Dil Chahta Hai",
+      "industry": "bollywood",
+      "year": 2001,
+      "cast": ["Aamir Khan", "Saif Ali Khan", "Akshaye Khanna"],
+      "about": "Three friends navigate love and growing up after a coastal vacation.",
+      "hints": [
+        "It stars Aamir Khan, Saif Ali Khan and Akshaye Khanna.",
+        "Three friends navigate love and growing up after a coastal vacation.",
+        "It was released in 2001.",
+        "It is a Bollywood coming-of-age."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_036",
+      "title": "Gadar Ek Prem Katha",
+      "industry": "bollywood",
+      "year": 2001,
+      "cast": ["Sunny Deol", "Ameesha Patel"],
+      "about": "A truck driver marries across Partition lines and fights to reunite his family.",
+      "hints": [
+        "It stars Sunny Deol and Ameesha Patel.",
+        "A truck driver marries across Partition lines and fights to reunite his family.",
+        "It was released in 2001.",
+        "It is a Bollywood epic romance."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_037",
+      "title": "Devdas",
+      "industry": "bollywood",
+      "year": 2002,
+      "cast": ["Shahrukh Khan", "Aishwarya Rai", "Madhuri Dixit"],
+      "about": "A heartbroken man destroys himself after losing his childhood sweetheart.",
+      "hints": [
+        "It stars Shahrukh Khan, Aishwarya Rai and Madhuri Dixit.",
+        "A heartbroken man destroys himself after losing his childhood sweetheart.",
+        "It was released in 2002.",
+        "It is a Bollywood tragic romance."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_038",
+      "title": "Raaz",
+      "industry": "bollywood",
+      "year": 2002,
+      "cast": ["Bipasha Basu", "Dino Morea", "Malini Sharma"],
+      "about": "A couple's hill-station stay turns terrifying as a spirit intervenes.",
+      "hints": [
+        "It stars Bipasha Basu, Dino Morea and Malini Sharma.",
+        "A couple's hill-station stay turns terrifying as a spirit intervenes.",
+        "It was released in 2002.",
+        "It is a Bollywood horror thriller."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_039",
+      "title": "Company",
+      "industry": "bollywood",
+      "year": 2002,
+      "cast": ["Ajay Devgn", "Vivek Oberoi", "Manisha Koirala"],
+      "about": "Two underworld partners rise together until ambition drives them apart.",
+      "hints": [
+        "It stars Ajay Devgn, Vivek Oberoi and Manisha Koirala.",
+        "Two underworld partners rise together until ambition drives them apart.",
+        "It was released in 2002.",
+        "It is a Bollywood crime drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_040",
+      "title": "Mujhse Dosti Karoge",
+      "industry": "bollywood",
+      "year": 2002,
+      "cast": ["Hrithik Roshan", "Rani Mukerji", "Kareena Kapoor"],
+      "about": "A letter mix-up creates a triangle among childhood friends.",
+      "hints": [
+        "It stars Hrithik Roshan, Rani Mukerji and Kareena Kapoor.",
+        "A letter mix-up creates a triangle among childhood friends.",
+        "It was released in 2002.",
+        "It is a Bollywood romantic comedy."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_041",
+      "title": "Kal Ho Naa Ho",
+      "industry": "bollywood",
+      "year": 2003,
+      "cast": ["Shahrukh Khan", "Preity Zinta", "Saif Ali Khan"],
+      "about": "A terminally ill man teaches his neighbor to live life to the fullest.",
+      "hints": [
+        "It stars Shahrukh Khan, Preity Zinta and Saif Ali Khan.",
+        "A terminally ill man teaches his neighbor to live life to the fullest.",
+        "It was released in 2003.",
+        "It is a Bollywood romantic drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_042",
+      "title": "Baghban",
+      "industry": "bollywood",
+      "year": 2003,
+      "cast": ["Amitabh Bachchan", "Hema Malini"],
+      "about": "Parents who sacrificed everything face neglect from their grown children.",
+      "hints": [
+        "It stars Amitabh Bachchan and Hema Malini.",
+        "Parents who sacrificed everything face neglect from their grown children.",
+        "It was released in 2003.",
+        "It is a Bollywood family drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_043",
+      "title": "Munna Bhai M.B.B.S.",
+      "industry": "bollywood",
+      "year": 2003,
+      "cast": ["Sanjay Dutt", "Arshad Warsi", "Gracy Singh"],
+      "about": "A gangster enrolls in medical school to fulfill his father's dream.",
+      "hints": [
+        "It stars Sanjay Dutt, Arshad Warsi and Gracy Singh.",
+        "A gangster enrolls in medical school to fulfill his father's dream.",
+        "It was released in 2003.",
+        "It is a Bollywood comedy drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_044",
+      "title": "Murder",
+      "industry": "bollywood",
+      "year": 2004,
+      "cast": ["Emraan Hashmi", "Ashmit Patel", "Mallika Sherawat"],
+      "about": "A woman's affair spirals into obsession and tragedy.",
+      "hints": [
+        "It stars Emraan Hashmi, Ashmit Patel and Mallika Sherawat.",
+        "A woman's affair spirals into obsession and tragedy.",
+        "It was released in 2004.",
+        "It is a Bollywood erotic thriller."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_045",
+      "title": "Rocky Aur Rani",
+      "industry": "bollywood",
+      "year": 2023,
+      "cast": ["Ranveer Singh", "Alia Bhatt", "Dharmendra", "Jaya Bachchan"],
+      "about": "A flamboyant man and a cultured woman try to win over each other's families.",
+      "hints": [
+        "It stars Ranveer Singh, Alia Bhatt, Dharmendra and Jaya Bachchan.",
+        "A flamboyant man and a cultured woman try to win over each other's families.",
+        "It was released in 2023.",
+        "It is a Bollywood romantic comedy drama."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_046",
+      "title": "Dhoom",
+      "industry": "bollywood",
+      "year": 2004,
+      "cast": ["Abhishek Bachchan", "Uday Chopra", "John Abraham"],
+      "about": "A cop chases a stylish biker gang robbing banks across the country.",
+      "hints": [
+        "It stars Abhishek Bachchan, Uday Chopra and John Abraham.",
+        "A cop chases a stylish biker gang robbing banks across the country.",
+        "It was released in 2004.",
+        "It is a Bollywood action thriller."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_047",
+      "title": "Black",
+      "industry": "bollywood",
+      "year": 2005,
+      "cast": ["Amitabh Bachchan", "Rani Mukerji"],
+      "about": "A deaf-blind girl and her teacher forge a powerful bond against all odds.",
+      "hints": [
+        "It stars Amitabh Bachchan and Rani Mukerji.",
+        "A deaf-blind girl and her teacher forge a powerful bond against all odds.",
+        "It was released in 2005.",
+        "It is a Bollywood drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_048",
+      "title": "Bunty Aur Babli",
+      "industry": "bollywood",
+      "year": 2005,
+      "cast": ["Abhishek Bachchan", "Rani Mukerji", "Amitabh Bachchan"],
+      "about": "Two small-town dreamers become India's mostwanted con artists.",
+      "hints": [
+        "It stars Abhishek Bachchan, Rani Mukerji and Amitabh Bachchan.",
+        "Two small-town dreamers become India's most wanted con artists.",
+        "It was released in 2005.",
+        "It is a Bollywood comedy."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_049",
+      "title": "No Entry",
+      "industry": "bollywood",
+      "year": 2005,
+      "cast": ["Salman Khan", "Anil Kapoor", "Fardeen Khan"],
+      "about": "Three husbands find their lives complicated by a mysterious woman.",
+      "hints": [
+        "It stars Salman Khan, Anil Kapoor and Fardeen Khan.",
+        "Three husbands find their lives complicated by a mysterious woman.",
+        "It was released in 2005.",
+        "It is a Bollywood comedy."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_050",
+      "title": "Sardar Udham",
+      "industry": "bollywood",
+      "year": 2021,
+      "cast": ["Vicky Kaushal", "Shaun Scott"],
+      "about": "A revolutionary travels to London to avenge a massacre that changed history.",
+      "hints": [
+        "It stars Vicky Kaushal and Shaun Scott.",
+        "A revolutionary travels to London to avenge a massacre that changed history.",
+        "It was released in 2021.",
+        "It is a Bollywood biographical drama."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_051",
+      "title": "Dhoom Returns",
+      "industry": "bollywood",
+      "year": 2006,
+      "cast": ["Hrithik Roshan", "Aishwarya Rai", "Abhishek Bachchan"],
+      "about": "A daring thief challenges a cop to a high-stakes chase across cities.",
+      "hints": [
+        "It stars Hrithik Roshan, Aishwarya Rai and Abhishek Bachchan.",
+        "A daring thief challenges a cop to a high-stakes chase across cities.",
+        "It was released in 2006.",
+        "It is a Bollywood action thriller."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_052",
+      "title": "Kabhi Alvida Naa Kehna",
+      "industry": "bollywood",
+      "year": 2006,
+      "cast": ["Shahrukh Khan", "Rani Mukerji", "Abhishek Bachchan", "Preity Zinta"],
+      "about": "Married couples in New York struggle with infidelity and unfulfilled dreams.",
+      "hints": [
+        "It stars Shahrukh Khan, Rani Mukerji, Abhishek Bachchan and Preity Zinta.",
+        "Married couples in New York struggle with infidelity and unfulfilled dreams.",
+        "It was released in 2006.",
+        "It is a Bollywood romantic drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_053",
+      "title": "Don",
+      "industry": "bollywood",
+      "year": 2006,
+      "cast": ["Shahrukh Khan", "Priyanka Chopra", "Arjun Rampal"],
+      "about": "A lookalike is recruited to infiltrate a powerful crime syndicate.",
+      "hints": [
+        "It stars Shahrukh Khan, Priyanka Chopra and Arjun Rampal.",
+        "A lookalike is recruited to infiltrate a powerful crime syndicate.",
+        "It was released in 2006.",
+        "It is a Bollywood action thriller."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_054",
+      "title": "Om Shanti Om",
+      "industry": "bollywood",
+      "year": 2007,
+      "cast": ["Shahrukh Khan", "Deepika Padukone"],
+      "about": "A junior artist is reborn to solve a mystery from the 1970s film world.",
+      "hints": [
+        "It stars Shahrukh Khan and Deepika Padukone.",
+        "A junior artist is reborn to solve a mystery from the 1970s film world.",
+        "It was released in 2007.",
+        "It is a Bollywood romantic thriller."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_055",
+      "title": "Chak De India",
+      "industry": "bollywood",
+      "year": 2007,
+      "cast": ["Shahrukh Khan"],
+      "about": "A disgraced hockey player coaches India's women's team toward glory.",
+      "hints": [
+        "It stars Shahrukh Khan.",
+        "A disgraced hockey player coaches India's women's team toward glory.",
+        "It was released in 2007.",
+        "It is a Bollywood sports drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_056",
+      "title": "Guru",
+      "industry": "bollywood",
+      "year": 2007,
+      "cast": ["Abhishek Bachchan", "Aishwarya Rai", "Mithun Chakraborty"],
+      "about": "A village man builds a business empire against all odds in 1950s India.",
+      "hints": [
+        "It stars Abhishek Bachchan, Aishwarya Rai and Mithun Chakraborty.",
+        "A village man builds a business empire against all odds in 1950s India.",
+        "It was released in 2007.",
+        "It is a Bollywood biographical drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_057",
+      "title": "Jab We Met",
+      "industry": "bollywood",
+      "year": 2007,
+      "cast": ["Shahid Kapoor", "Kareena Kapoor"],
+      "about": "A heartbroken businessman meets a free-spirited girl on a train journey.",
+      "hints": [
+        "It stars Shahid Kapoor and Kareena Kapoor.",
+        "A heartbroken businessman meets a free-spirited girl on a train journey.",
+        "It was released in 2007.",
+        "It is a Bollywood romantic comedy."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_058",
+      "title": "Race",
+      "industry": "bollywood",
+      "year": 2008,
+      "cast": ["Saif Ali Khan", "Akshaye Khanna", "Bipasha Basu"],
+      "about": "Twin brothers are locked in a deadly game of greed and betrayal.",
+      "hints": [
+        "It stars Saif Ali Khan, Akshaye Khanna and Bipasha Basu.",
+        "Twin brothers are locked in a deadly game of greed and betrayal.",
+        "It was released in 2008.",
+        "It is a Bollywood thriller."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_059",
+      "title": "Ghajini",
+      "industry": "bollywood",
+      "year": 2008,
+      "cast": ["Aamir Khan", "Asin"],
+      "about": "A man with short-term memory loss hunts the criminals who ruined his life.",
+      "hints": [
+        "It stars Aamir Khan and Asin.",
+        "A man with short-term memory loss hunts the criminals who ruined his life.",
+        "It was released in 2008.",
+        "It is a Bollywood action thriller."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_060",
+      "title": "Kantara",
+      "industry": "bollywood",
+      "year": 2022,
+      "cast": ["Rishab Shetty", "Sapthami Gowda"],
+      "about": "A coastal village clashes with forest officials over sacred land traditions.",
+      "hints": [
+        "It stars Rishab Shetty and Sapthami Gowda.",
+        "A coastal village clashes with forest officials over sacred land traditions.",
+        "It was released in 2022.",
+        "It is a Bollywood action drama."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_061",
+      "title": "Rocket Singh",
+      "industry": "bollywood",
+      "year": 2009,
+      "cast": ["Ranbir Kapoor", "Shazahn Padamsee"],
+      "about": "A cheerful salesman starts his own honest company in a corrupt industry.",
+      "hints": [
+        "It stars Ranbir Kapoor and Shazahn Padamsee.",
+        "A cheerful salesman starts his own honest company in a corrupt industry.",
+        "It was released in 2009.",
+        "It is a Bollywood comedy drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_062",
+      "title": "Wake Up Sid",
+      "industry": "bollywood",
+      "year": 2009,
+      "cast": ["Ranbir Kapoor", "Konkona Sen Sharma"],
+      "about": "A lazy college graduate finds purpose after moving to Mumbai.",
+      "hints": [
+        "It stars Ranbir Kapoor and Konkona Sen Sharma.",
+        "A lazy college graduate finds purpose after moving to Mumbai.",
+        "It was released in 2009.",
+        "It is a Bollywood coming-of-age comedy."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_063",
+      "title": "Love Aaj Kal",
+      "industry": "bollywood",
+      "year": 2009,
+      "cast": ["Saif Ali Khan", "Deepika Padukone"],
+      "about": "Two timelines explore how love and commitment have evolved across generations.",
+      "hints": [
+        "It stars Saif Ali Khan and Deepika Padukone.",
+        "Two timelines explore how love and commitment have evolved across generations.",
+        "It was released in 2009.",
+        "It is a Bollywood romantic drama."
+      ],
+      "era": "2000-2009"
+    },
+    {
+      "id": "bollywood_064",
+      "title": "My Name Is Khan",
+      "industry": "bollywood",
+      "year": 2010,
+      "cast": ["Shahrukh Khan", "Kajol"],
+      "about": "An autistic man journeys across America to meet the president after tragedy.",
+      "hints": [
+        "It stars Shahrukh Khan and Kajol.",
+        "An autistic man journeys across America to meet the president after tragedy.",
+        "It was released in 2010.",
+        "It is a Bollywood drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_065",
+      "title": "Dabangg",
+      "industry": "bollywood",
+      "year": 2010,
+      "cast": ["Salman Khan", "Sonakshi Sinha", "Arbaaz Khan"],
+      "about": "A corrupt but charismatic cop takes on a powerful criminal in a small town.",
+      "hints": [
+        "It stars Salman Khan, Sonakshi Sinha and Arbaaz Khan.",
+        "A corrupt but charismatic cop takes on a powerful criminal in a small town.",
+        "It was released in 2010.",
+        "It is a Bollywood action comedy."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_066",
+      "title": "Raajneeti",
+      "industry": "bollywood",
+      "year": 2010,
+      "cast": ["Ajay Devgn", "Ranbir Kapoor", "Nana Patekar", "Katrina Kaif"],
+      "about": "A political family dynasty descends into power games and betrayal.",
+      "hints": [
+        "It stars Ajay Devgn, Ranbir Kapoor, Nana Patekar and Katrina Kaif.",
+        "A political family dynasty descends into power games and betrayal.",
+        "It was released in 2010.",
+        "It is a Bollywood political thriller."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_067",
+      "title": "Zindagi Na Milegi Dobara",
+      "industry": "bollywood",
+      "year": 2011,
+      "cast": ["Hrithik Roshan", "Farhan Akhtar", "Abhay Deol"],
+      "about": "Three friends on a bachelor trip rediscover life through adventure sports.",
+      "hints": [
+        "It stars Hrithik Roshan, Farhan Akhtar and Abhay Deol.",
+        "Three friends on a bachelor trip rediscover life through adventure sports.",
+        "It was released in 2011.",
+        "It is a Bollywood comedy drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_068",
+      "title": "Bodyguard",
+      "industry": "bollywood",
+      "year": 2011,
+      "cast": ["Salman Khan", "Kareena Kapoor"],
+      "about": "A personal security agent falls for the woman he is assigned to protect.",
+      "hints": [
+        "It stars Salman Khan and Kareena Kapoor.",
+        "A personal security agent falls for the woman he is assigned to protect.",
+        "It was released in 2011.",
+        "It is a Bollywood action romance."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_069",
+      "title": "The Dirty Picture",
+      "industry": "bollywood",
+      "year": 2011,
+      "cast": ["Vidya Balan", "Emraan Hashmi", "Naseeruddin Shah"],
+      "about": "A bold woman fights for stardom in a male-dominated film industry.",
+      "hints": [
+        "It stars Vidya Balan, Emraan Hashmi and Naseeruddin Shah.",
+        "A bold woman fights for stardom in a male-dominated film industry.",
+        "It was released in 2011.",
+        "It is a Bollywood biographical drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_070",
+      "title": "Barfi",
+      "industry": "bollywood",
+      "year": 2012,
+      "cast": ["Ranbir Kapoor", "Priyanka Chopra", "Ileana D'Cruz"],
+      "about": "A deaf-mute man and an autistic woman find love in unexpected places.",
+      "hints": [
+        "It stars Ranbir Kapoor, Priyanka Chopra and Ileana D'Cruz.",
+        "A deaf-mute man and an autistic woman find love in unexpected places.",
+        "It was released in 2012.",
+        "It is a Bollywood romantic comedy drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_071",
+      "title": "Ek Tha Tiger",
+      "industry": "bollywood",
+      "year": 2012,
+      "cast": ["Salman Khan", "Katrina Kaif"],
+      "about": "An Indian spy falls for a Pakistani agent during a covert mission.",
+      "hints": [
+        "It stars Salman Khan and Katrina Kaif.",
+        "An Indian spy falls for a Pakistani agent during a covert mission.",
+        "It was released in 2012.",
+        "It is a Bollywood spy action thriller."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_072",
+      "title": "Talaash",
+      "industry": "bollywood",
+      "year": 2012,
+      "cast": ["Aamir Khan", "Rani Mukerji", "Kareena Kapoor"],
+      "about": "A cop investigating a drowning case discovers unsettling personal truths.",
+      "hints": [
+        "It stars Aamir Khan, Rani Mukerji and Kareena Kapoor.",
+        "A cop investigating a drowning case discovers unsettling personal truths.",
+        "It was released in 2012.",
+        "It is a Bollywood psychological thriller."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_073",
+      "title": "Chennai Express",
+      "industry": "bollywood",
+      "year": 2013,
+      "cast": ["Shahrukh Khan", "Deepika Padukone"],
+      "about": "A man accidentally takes a gangster's daughter on an epic train journey south.",
+      "hints": [
+        "It stars Shahrukh Khan and Deepika Padukone.",
+        "A man accidentally takes a gangster's daughter on an epic train journey south.",
+        "It was released in 2013.",
+        "It is a Bollywood action comedy."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_074",
+      "title": "Yeh Jawaani Hai Deewani",
+      "industry": "bollywood",
+      "year": 2013,
+      "cast": ["Ranbir Kapoor", "Deepika Padukone"],
+      "about": "Two former college friends reunite on a trek and rediscover their bond.",
+      "hints": [
+        "It stars Ranbir Kapoor and Deepika Padukone.",
+        "Two former college friends reunite on a trek and rediscover their bond.",
+        "It was released in 2013.",
+        "It is a Bollywood romantic drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_075",
+      "title": "Raees",
+      "industry": "bollywood",
+      "year": 2017,
+      "cast": ["Shahrukh Khan", "Mahira Khan", "Nawazuddin Siddiqui"],
+      "about": "A bootlegger rises to power in Gujarat until a relentless cop challenges him.",
+      "hints": [
+        "It stars Shahrukh Khan, Mahira Khan and Nawazuddin Siddiqui.",
+        "A bootlegger rises to power in Gujarat until a relentless cop challenges him.",
+        "It was released in 2017.",
+        "It is a Bollywood action crime drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_076",
+      "title": "Dangal",
+      "industry": "bollywood",
+      "year": 2016,
+      "cast": ["Aamir Khan", "Fatima Sana Shaikh"],
+      "about": "A wrestler father trains his daughters to become world champions.",
+      "hints": [
+        "It stars Aamir Khan and Fatima Sana Shaikh.",
+        "A wrestler father trains his daughters to become world champions.",
+        "It was released in 2016.",
+        "It is a Bollywood sports drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_077",
+      "title": "PK",
+      "industry": "bollywood",
+      "year": 2014,
+      "cast": ["Aamir Khan", "Anushka Sharma", "Sanjay Dutt"],
+      "about": "An alien questions religious practices and human beliefs while searching for God.",
+      "hints": [
+        "It stars Aamir Khan, Anushka Sharma and Sanjay Dutt.",
+        "An alien questions religious practices and human beliefs while searching for God.",
+        "It was released in 2014.",
+        "It is a Bollywood comedy drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_078",
+      "title": "Bajrangi Bhaijaan",
+      "industry": "bollywood",
+      "year": 2015,
+      "cast": ["Salman Khan", "Harshaali Malhotra", "Nawazuddin Siddiqui"],
+      "about": "A compassionate man helps a mute Pakistani girl return home across borders.",
+      "hints": [
+        "It stars Salman Khan, Harshaali Malhotra and Nawazuddin Siddiqui.",
+        "A compassionate man helps a mute Pakistani girl return home across borders.",
+        "It was released in 2015.",
+        "It is a Bollywood drama comedy."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_079",
+      "title": "Sultan",
+      "industry": "bollywood",
+      "year": 2016,
+      "cast": ["Salman Khan", "Anushka Sharma"],
+      "about": "A wrestling champion falls from grace and fights to reclaim his life and love.",
+      "hints": [
+        "It stars Salman Khan and Anushka Sharma.",
+        "A wrestling champion falls from grace and fights to reclaim his life and love.",
+        "It was released in 2016.",
+        "It is a Bollywood sports romance."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_080",
+      "title": "Dear Zindagi",
+      "industry": "bollywood",
+      "year": 2016,
+      "cast": ["Shahrukh Khan", "Alia Bhatt"],
+      "about": "A young woman seeks therapy and learns to embrace life's imperfections.",
+      "hints": [
+        "It stars Shahrukh Khan and Alia Bhatt.",
+        "A young woman seeks therapy and learns to embrace life's imperfections.",
+        "It was released in 2016.",
+        "It is a Bollywood romantic comedy drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_081",
+      "title": "M.S. Dhoni",
+      "industry": "bollywood",
+      "year": 2016,
+      "cast": ["Sushant Singh Rajput", "Disha Patani"],
+      "about": "The inspiring journey of a ticket collector who becomes India's cricket captain.",
+      "hints": [
+        "It stars Sushant Singh Rajput and Disha Patani.",
+        "The inspiring journey of a ticket collector who becomes India's cricket captain.",
+        "It was released in 2016.",
+        "It is a Bollywood biographical sports drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_082",
+      "title": "Tiger Zinda Hai",
+      "industry": "bollywood",
+      "year": 2017,
+      "cast": ["Salman Khan", "Katrina Kaif"],
+      "about": "An retired spy returns to rescue kidnapped nurses from a terrorist group.",
+      "hints": [
+        "It stars Salman Khan and Katrina Kaif.",
+        "A retired spy returns to rescue kidnapped nurses from a terrorist group.",
+        "It was released in 2017.",
+        "It is a Bollywood spy action thriller."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_083",
+      "title": "Hindi Medium",
+      "industry": "bollywood",
+      "year": 2017,
+      "cast": ["Irrfan Khan", "Saba Qamar"],
+      "about": "A wealthy couple pretends to be poor to get their daughter into a top school.",
+      "hints": [
+        "It stars Irrfan Khan and Saba Qamar.",
+        "A wealthy couple pretends to be poor to get their daughter into a top school.",
+        "It was released in 2017.",
+        "It is a Bollywood comedy drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_084",
+      "title": "Padmaavat",
+      "industry": "bollywood",
+      "year": 2018,
+      "cast": ["Deepika Padukone", "Ranveer Singh", "Shahid Kapoor"],
+      "about": "A queen's beauty inspires obsession in a ruthless sultan who wages war for her.",
+      "hints": [
+        "It stars Deepika Padukone, Ranveer Singh and Shahid Kapoor.",
+        "A queen's beauty inspires obsession in a ruthless sultan who wages war for her.",
+        "It was released in 2018.",
+        "It is a Bollywood historical epic drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_085",
+      "title": "Sanju",
+      "industry": "bollywood",
+      "year": 2018,
+      "cast": ["Ranbir Kapoor", "Paresh Rawal", "Vicky Kaushal", "Anushka Sharma"],
+      "about": "The tumultuous life of a Bollywood star battling addiction and public scrutiny.",
+      "hints": [
+        "It stars Ranbir Kapoor, Paresh Rawal, Vicky Kaushal and Anushka Sharma.",
+        "The tumultuous life of a Bollywood star battling addiction and public scrutiny.",
+        "It was released in 2018.",
+        "It is a Bollywood biographical drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_086",
+      "title": "Andhadhun",
+      "industry": "bollywood",
+      "year": 2018,
+      "cast": ["Ayushmann Khurrana", "Tabu", "Radhika Apte"],
+      "about": "A blind pianist witnesses a murder and gets entangled in a dark conspiracy.",
+      "hints": [
+        "It stars Ayushmann Khurrana, Tabu and Radhika Apte.",
+        "A blind pianist witnesses a murder and gets entangled in a dark conspiracy.",
+        "It was released in 2018.",
+        "It is a Bollywood black comedy thriller."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_087",
+      "title": "Simmba",
+      "industry": "bollywood",
+      "year": 2018,
+      "cast": ["Ranveer Singh", "Sara Ali Khan", "Sonu Sood"],
+      "about": "A corrupt cop has a change of heart after witnessing a horrific crime.",
+      "hints": [
+        "It stars Ranveer Singh, Sara Ali Khan and Sonu Sood.",
+        "A corrupt cop has a change of heart after witnessing a horrific crime.",
+        "It was released in 2018.",
+        "It is a Bollywood action comedy."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_088",
+      "title": "Gully Boy",
+      "industry": "bollywood",
+      "year": 2019,
+      "cast": ["Ranveer Singh", "Alia Bhatt"],
+      "about": "A street rapper from Mumbai's slums fights to make his voice heard.",
+      "hints": [
+        "It stars Ranveer Singh and Alia Bhatt.",
+        "A street rapper from Mumbai's slums fights to make his voice heard.",
+        "It was released in 2019.",
+        "It is a Bollywood musical drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_089",
+      "title": "War",
+      "industry": "bollywood",
+      "year": 2019,
+      "cast": ["Hrithik Roshan", "Tiger Shroff", "Vaani Kapoor"],
+      "about": "A soldier is sent to eliminate his former mentor who has gone rogue.",
+      "hints": [
+        "It stars Hrithik Roshan, Tiger Shroff and Vaani Kapoor.",
+        "A soldier is sent to eliminate his former mentor who has gone rogue.",
+        "It was released in 2019.",
+        "It is a Bollywood action thriller."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_090",
+      "title": "Kabir Singh",
+      "industry": "bollywood",
+      "year": 2019,
+      "cast": ["Shahid Kapoor", "Kiara Advani"],
+      "about": "A brilliant surgeon spirals into self-destruction after losing the woman he loves.",
+      "hints": [
+        "It stars Shahid Kapoor and Kiara Advani.",
+        "A brilliant surgeon spirals into self-destruction after losing the woman he loves.",
+        "It was released in 2019.",
+        "It is a Bollywood romantic drama."
+      ],
+      "era": "2010-2019"
+    },
+    {
+      "id": "bollywood_091",
+      "title": "Tanhaji",
+      "industry": "bollywood",
+      "year": 2020,
+      "cast": ["Ajay Devgn", "Saif Ali Khan", "Kajol"],
+      "about": "A warrior risked everything to recapture a strategically vital fortress.",
+      "hints": [
+        "It stars Ajay Devgn, Saif Ali Khan and Kajol.",
+        "A warrior risked everything to recapture a strategically vital fortress.",
+        "It was released in 2020.",
+        "It is a Bollywood historical action drama."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_092",
+      "title": "Chhapaak",
+      "industry": "bollywood",
+      "year": 2020,
+      "cast": ["Deepika Padukone", "Vikrant Massey"],
+      "about": "An acid attack survivor fights for justice and inspires social change.",
+      "hints": [
+        "It stars Deepika Padukone and Vikrant Massey.",
+        "An acid attack survivor fights for justice and inspires social change.",
+        "It was released in 2020.",
+        "It is a Bollywood biographical drama."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_093",
+      "title": "Sooryavanshi",
+      "industry": "bollywood",
+      "year": 2021,
+      "cast": ["Akshay Kumar", "Katrina Kaif", "Ranveer Singh", "Ajay Devgn"],
+      "about": "An anti-terrorism chief races to stop a devastating attack on Mumbai.",
+      "hints": [
+        "It stars Akshay Kumar, Katrina Kaif, Ranveer Singh and Ajay Devgn.",
+        "An anti-terrorism chief races to stop a devastating attack on Mumbai.",
+        "It was released in 2021.",
+        "It is a Bollywood action thriller."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_094",
+      "title": "Shershaah",
+      "industry": "bollywood",
+      "year": 2021,
+      "cast": ["Sidharth Malhotra", "Kiara Advani"],
+      "about": "The real-life story of a Param Vir Chakra awardee who showed extraordinary bravery.",
+      "hints": [
+        "It stars Sidharth Malhotra and Kiara Advani.",
+        "The real-life story of a Param Vir Chakra awardee who showed extraordinary bravery.",
+        "It was released in 2021.",
+        "It is a Bollywood biographical war drama."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_095",
+      "title": "Gangubai Kathiawadi",
+      "industry": "bollywood",
+      "year": 2022,
+      "cast": ["Alia Bhatt", "Ajay Devgn", "Vijay Raaz"],
+      "about": "A woman rises from adversity to become the powerful queen of Kamathipura.",
+      "hints": [
+        "It stars Alia Bhatt, Ajay Devgn and Vijay Raaz.",
+        "A woman rises from adversity to become the powerful queen of Kamathipura.",
+        "It was released in 2022.",
+        "It is a Bollywood biographical crime drama."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_096",
+      "title": "Brahmastra",
+      "industry": "bollywood",
+      "year": 2022,
+      "cast": ["Ranbir Kapoor", "Alia Bhatt", "Amitabh Bachchan"],
+      "about": "A young man discovers he possesses a divine power and must protect the world.",
+      "hints": [
+        "It stars Ranbir Kapoor, Alia Bhatt and Amitabh Bachchan.",
+        "A young man discovers he possesses a divine power and must protect the world.",
+        "It was released in 2022.",
+        "It is a Bollywood fantasy action adventure."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_097",
+      "title": "KGF Chapter Two",
+      "industry": "bollywood",
+      "year": 2022,
+      "cast": ["Yash", "Sanjay Dutt", "Raveena Tandon"],
+      "about": "A gangster's rise to power continues as he faces a formidable new enemy.",
+      "hints": [
+        "It stars Yash, Sanjay Dutt and Raveena Tandon.",
+        "A gangster's rise to power continues as he faces a formidable new enemy.",
+        "It was released in 2022.",
+        "It is a Bollywood action drama."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_098",
+      "title": "Pathaan",
+      "industry": "bollywood",
+      "year": 2023,
+      "cast": ["Shahrukh Khan", "Deepika Padukone", "John Abraham"],
+      "about": "An exiled agent is called back to stop a deadly threat to India.",
+      "hints": [
+        "It stars Shahrukh Khan, Deepika Padukone and John Abraham.",
+        "An exiled agent is called back to stop a deadly threat to India.",
+        "It was released in 2023.",
+        "It is a Bollywood spy action thriller."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_099",
+      "title": "Jawan",
+      "industry": "bollywood",
+      "year": 2023,
+      "cast": ["Shahrukh Khan", "Nayanthara", "Vijay Sethupathi"],
+      "about": "A man wages a personal war against a corrupt system while protecting the innocent.",
+      "hints": [
+        "It stars Shahrukh Khan, Nayanthara and Vijay Sethupathi.",
+        "A man wages a personal war against a corrupt system while protecting the innocent.",
+        "It was released in 2023.",
+        "It is a Bollywood action thriller."
+      ],
+      "era": "2020-2026"
+    },
+    {
+      "id": "bollywood_100",
+      "title": "Animal",
+      "industry": "bollywood",
+      "year": 2023,
+      "cast": ["Ranbir Kapoor", "Anil Kapoor", "Bobby Deol", "Rashmika Mandanna"],
+      "about": "A son's intense devotion to his father drives him down a dangerous path.",
+      "hints": [
+        "It stars Ranbir Kapoor, Anil Kapoor, Bobby Deol and Rashmika Mandanna.",
+        "A son's intense devotion to his father drives him down a dangerous path.",
+        "It was released in 2023.",
+        "It is a Bollywood action crime drama."
+      ],
+      "era": "2020-2026"
+    }
+  ]
+}
