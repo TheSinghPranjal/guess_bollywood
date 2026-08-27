@@ -1,44 +1,61 @@
-import java.util.Properties
-import java.io.FileInputStream
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-// Load keystore properties
-val keystoreProperties = Properties()
-val keystorePropertiesFile = rootProject.file("key.properties")
-
-if (keystorePropertiesFile.exists()) {
-    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
-}
-
 android {
-    namespace = "com.the_lazy_bear_club.guessbollywood"
+    namespace = "com.lazy_bear_club.guess_bollywood"
 
-    compileSdk = 36
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
 
     defaultConfig {
-        applicationId = "com.the_lazy_bear_club.guessbollywood"
+        applicationId = "com.lazy_bear_club.guess_bollywood"
 
         minSdk = flutter.minSdkVersion
-        targetSdk = 36
+        targetSdk = flutter.targetSdkVersion
 
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
+    // --------------------------------------------------
+    // Java 17
+    // --------------------------------------------------
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    // --------------------------------------------------
+    // Release signing
+    // --------------------------------------------------
     signingConfigs {
         create("release") {
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
-            storeFile = keystoreProperties["storeFile"]?.let { file(it) }
-            storePassword = keystoreProperties["storePassword"] as String
+            val keystorePropertiesFile = rootProject.file("key.properties")
+            val keystoreProperties = java.util.Properties()
+
+            if (keystorePropertiesFile.exists()) {
+                keystorePropertiesFile.inputStream().use {
+                    keystoreProperties.load(it)
+                }
+            }
+
+            keyAlias = keystoreProperties["keyAlias"] as String?
+            keyPassword = keystoreProperties["keyPassword"] as String?
+
+            storeFile = keystoreProperties["storeFile"]?.let {
+                file(it)
+            }
+
+            storePassword = keystoreProperties["storePassword"] as String?
         }
     }
 
+    // --------------------------------------------------
+    // Build types
+    // --------------------------------------------------
     buildTypes {
         release {
             signingConfig = signingConfigs.getByName("release")
@@ -49,6 +66,20 @@ android {
     }
 }
 
+// --------------------------------------------------
+// Kotlin JVM 17
+// --------------------------------------------------
+kotlin {
+    compilerOptions {
+        jvmTarget.set(
+            org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+        )
+    }
+}
+
+// --------------------------------------------------
+// Flutter
+// --------------------------------------------------
 flutter {
     source = "../.."
 }
