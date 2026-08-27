@@ -6,7 +6,8 @@
     <application
         android:label="Guess Bollywood"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round">
 
         <!-- Google AdMob App ID (Android) -->
         <meta-data
