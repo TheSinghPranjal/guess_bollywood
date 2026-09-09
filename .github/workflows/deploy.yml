@@ -1,0 +1,146 @@
+name: Guess Bollywood - Production Deploy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    name: Build and Deploy to Play Store
+    runs-on: ubuntu-latest
+
+    steps:
+      # --------------------------------------------------
+      # 1. Checkout main
+      # --------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      # --------------------------------------------------
+      # 2. Setup Java
+      # --------------------------------------------------
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # --------------------------------------------------
+      # 3. Setup Flutter
+      # --------------------------------------------------
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      # --------------------------------------------------
+      # 4. Get Flutter dependencies
+      # --------------------------------------------------
+      - name: Flutter Pub Get
+        run: flutter pub get
+
+      # --------------------------------------------------
+      # 5. Increment build number
+      # --------------------------------------------------
+      - name: Increment build number
+        id: version
+        shell: bash
+        run: |
+          CURRENT_VERSION=$(grep '^version:' pubspec.yaml | sed 's/version: //')
+
+          VERSION_NAME=$(echo "$CURRENT_VERSION" | cut -d'+' -f1)
+          BUILD_NUMBER=$(echo "$CURRENT_VERSION" | cut -d'+' -f2)
+
+          NEW_BUILD_NUMBER=$((BUILD_NUMBER + 1))
+
+          NEW_VERSION="${VERSION_NAME}+${NEW_BUILD_NUMBER}"
+
+          sed -i "s/^version:.*/version: ${NEW_VERSION}/" pubspec.yaml
+
+          echo "Previous version: ${CURRENT_VERSION}"
+          echo "New version: ${NEW_VERSION}"
+
+          echo "version_name=${VERSION_NAME}" >> "$GITHUB_OUTPUT"
+          echo "build_number=${NEW_BUILD_NUMBER}" >> "$GITHUB_OUTPUT"
+          echo "full_version=${NEW_VERSION}" >> "$GITHUB_OUTPUT"
+
+      # --------------------------------------------------
+      # 6. Commit updated version back to main
+      # --------------------------------------------------
+      - name: Commit new version
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add pubspec.yaml
+
+          git commit -m "chore: bump version to ${{ steps.version.outputs.full_version }}"
+
+          git push origin main
+
+      # --------------------------------------------------
+      # 7. Restore Android signing keystore
+      # --------------------------------------------------
+      - name: Restore Android keystore
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: |
+          mkdir -p android/app/keystore
+
+          echo "$KEYSTORE_BASE64" | base64 --decode > android/app/keystore/guess-bollywood-upload.jks
+
+          test -f android/app/keystore/guess-bollywood-upload.jks
+          echo "Keystore restored successfully"
+
+      # --------------------------------------------------
+      # 8. Create key.properties
+      # --------------------------------------------------
+      - name: Create key.properties
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          cat > android/key.properties <<EOF
+          storePassword=$KEYSTORE_PASSWORD
+          keyPassword=$KEY_PASSWORD
+          keyAlias=$KEY_ALIAS
+          storeFile=${GITHUB_WORKSPACE}/android/app/keystore/guess-bollywood-upload.jks
+          EOF
+
+          echo "key.properties created"
+
+      # --------------------------------------------------
+      # 9. Build signed production AAB
+      # --------------------------------------------------
+      - name: Build App Bundle
+        run: |
+          flutter build appbundle --release
+
+      # --------------------------------------------------
+      # 10. Verify AAB exists
+      # --------------------------------------------------
+      - name: Verify App Bundle
+        run: |
+          test -f build/app/outputs/bundle/release/app-release.aab
+
+          echo "AAB created successfully:"
+          ls -lh build/app/outputs/bundle/release/app-release.aab
+
+      # --------------------------------------------------
+      # 11. Upload to Google Play Production
+      # --------------------------------------------------
+      - name: Deploy to Google Play
+        uses: r0adkll/upload-google-play@v1.1.5
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT }}
+          packageName: com.lazy_bear_club.guess_bollywood
+          releaseFiles: build/app/outputs/bundle/release/app-release.aab
+          track: production
+          status: completed
