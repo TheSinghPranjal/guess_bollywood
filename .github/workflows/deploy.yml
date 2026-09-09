@@ -1,10 +1,14 @@
 name: Guess Bollywood - Production Deploy
 
 on:
+  push:
+    branches:
+      - main
+
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   deploy:
@@ -12,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       # --------------------------------------------------
       # 1. Checkout main
       # --------------------------------------------------
@@ -36,6 +41,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
+          flutter-version: '3.41.6'
           channel: stable
           cache: true
 
@@ -46,46 +52,40 @@ jobs:
         run: flutter pub get
 
       # --------------------------------------------------
-      # 5. Increment build number
+      # 5. Flutter Analyze
       # --------------------------------------------------
-      - name: Increment build number
+      - name: Flutter Analyze
+        run: flutter analyze
+
+      # --------------------------------------------------
+      # 6. Flutter Tests
+      # --------------------------------------------------
+      - name: Flutter Test
+        run: flutter test
+
+      # --------------------------------------------------
+      # 7. Calculate production version
+      # --------------------------------------------------
+      - name: Calculate build number
         id: version
         shell: bash
         run: |
           CURRENT_VERSION=$(grep '^version:' pubspec.yaml | sed 's/version: //')
-
           VERSION_NAME=$(echo "$CURRENT_VERSION" | cut -d'+' -f1)
-          BUILD_NUMBER=$(echo "$CURRENT_VERSION" | cut -d'+' -f2)
+          CURRENT_BUILD_NUMBER=$(echo "$CURRENT_VERSION" | cut -d'+' -f2)
 
-          NEW_BUILD_NUMBER=$((BUILD_NUMBER + 1))
+          NEW_BUILD_NUMBER=$((CURRENT_BUILD_NUMBER + GITHUB_RUN_NUMBER))
 
-          NEW_VERSION="${VERSION_NAME}+${NEW_BUILD_NUMBER}"
+          echo "Version name: $VERSION_NAME"
+          echo "Current pubspec build number: $CURRENT_BUILD_NUMBER"
+          echo "GitHub run number: $GITHUB_RUN_NUMBER"
+          echo "New Android version code: $NEW_BUILD_NUMBER"
 
-          sed -i "s/^version:.*/version: ${NEW_VERSION}/" pubspec.yaml
-
-          echo "Previous version: ${CURRENT_VERSION}"
-          echo "New version: ${NEW_VERSION}"
-
-          echo "version_name=${VERSION_NAME}" >> "$GITHUB_OUTPUT"
-          echo "build_number=${NEW_BUILD_NUMBER}" >> "$GITHUB_OUTPUT"
-          echo "full_version=${NEW_VERSION}" >> "$GITHUB_OUTPUT"
+          echo "version_name=$VERSION_NAME" >> "$GITHUB_OUTPUT"
+          echo "build_number=$NEW_BUILD_NUMBER" >> "$GITHUB_OUTPUT"
 
       # --------------------------------------------------
-      # 6. Commit updated version back to main
-      # --------------------------------------------------
-      - name: Commit new version
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add pubspec.yaml
-
-          git commit -m "chore: bump version to ${{ steps.version.outputs.full_version }}"
-
-          git push origin main
-
-      # --------------------------------------------------
-      # 7. Restore Android signing keystore
+      # 8. Restore Android signing keystore
       # --------------------------------------------------
       - name: Restore Android keystore
         env:
@@ -93,13 +93,15 @@ jobs:
         run: |
           mkdir -p android/app/keystore
 
-          echo "$KEYSTORE_BASE64" | base64 --decode > android/app/keystore/guess-bollywood-upload.jks
+          echo "$KEYSTORE_BASE64" | base64 --decode \
+            > android/app/keystore/guess-bollywood-upload.jks
 
           test -f android/app/keystore/guess-bollywood-upload.jks
+
           echo "Keystore restored successfully"
 
       # --------------------------------------------------
-      # 8. Create key.properties
+      # 9. Create key.properties
       # --------------------------------------------------
       - name: Create key.properties
         env:
@@ -117,14 +119,17 @@ jobs:
           echo "key.properties created"
 
       # --------------------------------------------------
-      # 9. Build signed production AAB
+      # 10. Build signed production AAB
       # --------------------------------------------------
       - name: Build App Bundle
         run: |
-          flutter build appbundle --release
+          flutter build appbundle \
+            --release \
+            --build-name="${{ steps.version.outputs.version_name }}" \
+            --build-number="${{ steps.version.outputs.build_number }}"
 
       # --------------------------------------------------
-      # 10. Verify AAB exists
+      # 11. Verify AAB
       # --------------------------------------------------
       - name: Verify App Bundle
         run: |
@@ -134,7 +139,7 @@ jobs:
           ls -lh build/app/outputs/bundle/release/app-release.aab
 
       # --------------------------------------------------
-      # 11. Upload to Google Play Production
+      # 12. Deploy to Google Play Production
       # --------------------------------------------------
       - name: Deploy to Google Play
         uses: r0adkll/upload-google-play@v1.1.5
