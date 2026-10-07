@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -82,10 +84,7 @@ class SettingsScreen extends ConsumerWidget {
                           ),
                           const Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text('1990'),
-                              Text('Now'),
-                            ],
+                            children: [Text('1990'), Text('Now')],
                           ),
                         ],
                       ),
@@ -97,7 +96,9 @@ class SettingsScreen extends ConsumerWidget {
                           for (var i = 0; i <= 4; i++)
                             Expanded(
                               child: Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 2),
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 2,
+                                ),
                                 child: ChoiceChip(
                                   label: Center(child: Text('$i')),
                                   selected: settings.hintCount == i,
@@ -128,6 +129,25 @@ class SettingsScreen extends ConsumerWidget {
                         ],
                       ),
                     ),
+                    if (ref
+                        .watch(consentManagerProvider)
+                        .privacyOptionsRequired)
+                      _SectionCard(
+                        title: 'AD PRIVACY',
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: TextButton(
+                            onPressed: () {
+                              unawaited(
+                                ref
+                                    .read(consentManagerProvider)
+                                    .showPrivacyOptionsForm(),
+                              );
+                            },
+                            child: const Text('Manage ad consent'),
+                          ),
+                        ),
+                      ),
                   ],
                 ),
               ),

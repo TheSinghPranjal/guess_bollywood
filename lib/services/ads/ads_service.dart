@@ -14,7 +14,10 @@ abstract class AdsService {
 
 /// Used in widget tests and on platforms where AdMob is unavailable.
 class FakeAdsService implements AdsService {
-  FakeAdsService({this.rewardedSucceeds = true, this.interstitialSucceeds = true});
+  FakeAdsService({
+    this.rewardedSucceeds = true,
+    this.interstitialSucceeds = true,
+  });
 
   bool rewardedSucceeds;
   bool interstitialSucceeds;
@@ -41,7 +44,10 @@ class FakeAdsService implements AdsService {
   }
 }
 
-/// Real AdMob implementation. Sample unit IDs in debug/profile; prod in release.
+/// Real AdMob implementation.
+///
+/// Debug and profile use Google's sample units. Release uses production IDs
+/// and never tags a test device. Call only after UMP consent allows ad requests.
 class MobileAdsService implements AdsService {
   MobileAdsService({required this.isTestMode});
 
@@ -62,28 +68,36 @@ class MobileAdsService implements AdsService {
       return;
     }
     try {
+      AppConstants.guardReleaseAdUnits();
       await MobileAds.instance.initialize();
-      if (isTestMode) {
-        await MobileAds.instance.updateRequestConfiguration(
-          RequestConfiguration(
-            testDeviceIds: const ['EMULATOR'],
-          ),
-        );
-      }
+      await MobileAds.instance.updateRequestConfiguration(
+        RequestConfiguration(
+          // 'EMULATOR' is a debug convenience only. Release and profile send
+          // an empty list so a store build cannot be marked as a test device.
+          testDeviceIds: kDebugMode ? const ['EMULATOR'] : const <String>[],
+        ),
+      );
       _initialized = true;
+      debugPrint(
+        'AdMob ${isTestMode ? 'test' : 'release'} units '
+        'banner=${AppConstants.bannerAdUnitId} '
+        'interstitial=${AppConstants.interstitialAdUnitId} '
+        'rewarded=${AppConstants.rewardedAdUnitId}',
+      );
       unawaited(_loadRewarded());
-      if (AppConstants.interstitialAdUnitId != null) {
-        unawaited(_loadInterstitial());
-      }
+      unawaited(_loadInterstitial());
     } catch (error, stack) {
       debugPrint('AdMob initialize failed: $error\n$stack');
       _initialized = false;
+      if (error is StateError) rethrow;
     }
   }
 
   AdRequest get _request => const AdRequest();
 
   Future<RewardedAd?> _loadRewarded() {
+    final adUnitId = AppConstants.rewardedAdUnitId;
+    if (adUnitId == null) return Future.value(null);
     if (_rewardedAd != null) return Future.value(_rewardedAd);
     if (_rewardedLoad != null) return _rewardedLoad!.future;
 
@@ -91,7 +105,7 @@ class MobileAdsService implements AdsService {
     _rewardedLoad = completer;
 
     RewardedAd.load(
-      adUnitId: AppConstants.rewardedAdUnitId,
+      adUnitId: adUnitId,
       request: _request,
       rewardedAdLoadCallback: RewardedAdLoadCallback(
         onAdLoaded: (ad) {

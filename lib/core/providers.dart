@@ -6,6 +6,7 @@ import '../data/models/game_settings.dart';
 import '../data/repositories/movie_repository.dart';
 import '../features/game/engine/game_engine.dart';
 import '../services/ads/ads_service.dart';
+import '../services/ads/consent_manager.dart';
 import '../services/audio/feedback_service.dart';
 import '../services/storage/storage_service.dart';
 
@@ -30,6 +31,10 @@ final adsServiceProvider = Provider<AdsService>((ref) {
     return MobileAdsService(isTestMode: AppConstants.isAdTestMode);
   }
   return FakeAdsService();
+});
+
+final consentManagerProvider = Provider<ConsentManager>((ref) {
+  return ConsentManager.unavailable();
 });
 
 final feedbackServiceProvider = Provider<FeedbackService>((ref) {

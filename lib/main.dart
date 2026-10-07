@@ -8,24 +8,36 @@ import 'core/providers.dart';
 import 'core/theme/app_theme.dart';
 import 'features/splash/splash_screen.dart';
 import 'services/ads/ads_service.dart';
+import 'services/ads/consent_manager.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
+  AppConstants.guardReleaseAdUnits();
 
   final prefs = await SharedPreferences.getInstance();
+  final consent = ConsentManager();
+  if (AppConstants.adsSupported) {
+    await consent.gatherConsent();
+  }
+
   final ads = AppConstants.adsSupported
       ? MobileAdsService(isTestMode: AppConstants.isAdTestMode)
       : FakeAdsService();
-  await ads.initialize();
+  final requestAds = !AppConstants.adsSupported || consent.canRequestAds;
+  if (requestAds) {
+    await ads.initialize();
+  } else {
+    debugPrint('AdMob: skipping ad requests until consent allows them.');
+  }
 
   runApp(
     ProviderScope(
       overrides: [
         sharedPreferencesProvider.overrideWithValue(prefs),
         adsServiceProvider.overrideWithValue(ads),
+        consentManagerProvider.overrideWithValue(consent),
       ],
       child: const BollywoodGuessApp(),
     ),

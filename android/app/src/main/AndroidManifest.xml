@@ -9,10 +9,14 @@
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round">
 
-        <!-- Google AdMob App ID (Android) -->
+        <!-- Google AdMob App ID (Android). Production publisher pub-8661918790125012. -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8661918790125012~8544493942"/>
+        <!-- Wait until MobileAds.initialize(), which runs after UMP consent. -->
+        <meta-data
+            android:name="com.google.android.gms.ads.DELAY_APP_MEASUREMENT_INIT"
+            android:value="true"/>
 
         <activity
             android:name="com.lazy_bear_club.guess_bollywood.MainActivity"

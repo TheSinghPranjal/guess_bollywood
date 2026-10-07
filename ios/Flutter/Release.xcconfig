@@ -1,2 +1,6 @@
 #include? "Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"
 #include "Generated.xcconfig"
+
+// TODO(admob): replace with the iOS AdMob App ID before shipping iOS.
+// Must match AppConstants.iosAppId. Not a Google sample App ID.
+GAD_APPLICATION_ID=ca-app-pub-8661918790125012~1000000002
