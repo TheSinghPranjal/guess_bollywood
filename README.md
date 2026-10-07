@@ -3,7 +3,7 @@
 Guess the Bollywood title. The Android app is on Google Play and serves AdMob
 banners, interstitials, and rewarded ads.
 
-Version **1.1.0+4** (`versionName` 1.1.0, Play `versionCode` 4).
+Version **1.1.0+5** (`versionName` 1.1.0, Play `versionCode` 5).
 
 ## AdMob IDs to create or paste
 
@@ -16,16 +16,18 @@ replaced with a sample unit.
 | Android App ID | Yes | `AndroidManifest.xml` and `AppConstants.androidAppId` | `ca-app-pub-8661918790125012~8544493942` |
 | Android banner | Yes | `AppConstants.androidBannerId` | `ca-app-pub-8661918790125012/2909023888` |
 | Android rewarded | Yes | `AppConstants.androidRewardedId` | `ca-app-pub-8661918790125012/1532740336` |
-| Android interstitial | **Create this unit** | `AppConstants.androidInterstitialId` | `ca-app-pub-8661918790125012/TODO_ANDROID_INTERSTITIAL` |
+| Android interstitial | Yes | `AppConstants.androidInterstitialId` | `ca-app-pub-8661918790125012/5959696196` |
 | iOS App ID | **Create the iOS app** | `AppConstants.iosAppId` **and** `GAD_APPLICATION_ID` in `ios/Flutter/Release.xcconfig` (same string in both) | `ca-app-pub-8661918790125012~1000000002` |
 | iOS banner | **Create this unit** | `AppConstants.iosBannerId` | `ca-app-pub-8661918790125012/TODO_IOS_BANNER` |
 | iOS interstitial | **Create this unit** | `AppConstants.iosInterstitialId` | `ca-app-pub-8661918790125012/TODO_IOS_INTERSTITIAL` |
 | iOS rewarded | **Create this unit** | `AppConstants.iosRewardedId` | `ca-app-pub-8661918790125012/TODO_IOS_REWARDED` |
 
-In AdMob, add an interstitial ad unit on the existing Android app, and create
-an iOS app plus banner, interstitial, and rewarded units. Paste each ID over
-the matching placeholder. Leave `ios/Flutter/Debug.xcconfig` on the sample App
-ID so debug runs can still show test ads.
+Android banner, interstitial, and rewarded units are set. iOS is still TODO
+because there is no iOS app yet. Those placeholders are skipped on Android and
+do not fail an Android release build. Create an iOS app plus banner,
+interstitial, and rewarded units, then paste each ID over the matching
+placeholder. Leave `ios/Flutter/Debug.xcconfig` on the sample App ID so debug
+runs can still show test ads.
 
 Also publish a GDPR message (and a US state privacy message if you need one)
 in AdMob → Privacy & messaging, for each app. The consent form only appears
@@ -65,8 +67,8 @@ not request the sample unit.
 
 ## Verify real ads in a release build
 
-1. Paste any TODO IDs you expect to fill. Android banner and rewarded are
-   already real.
+1. Android banner, interstitial, and rewarded IDs are already real. iOS IDs
+   stay TODO until an iOS app exists.
 2. Build the store artifact:
 
    ```bash
@@ -84,15 +86,15 @@ not request the sample unit.
    ```
 
    You want a line like `AdMob release units` whose banner is
-   `ca-app-pub-8661918790125012/2909023888` and whose rewarded ID is
-   `ca-app-pub-8661918790125012/1532740336`. Interstitial stays empty until
-   `TODO_ANDROID_INTERSTITIAL` is replaced. Publisher `3940256099942544` should
-   not appear.
+   `ca-app-pub-8661918790125012/2909023888`, whose interstitial is
+   `ca-app-pub-8661918790125012/5959696196`, and whose rewarded ID is
+   `ca-app-pub-8661918790125012/1532740336`. Publisher `3940256099942544` should
+   not appear. iOS TODO lines may be logged; they are not requested on Android.
 6. Play a round. The bottom banner must not be labeled "Test Ad".
 7. Lose and watch the extra-life video. That rewarded ad must not be labeled
    "Test Ad".
-8. Finish 4 rounds and tap Next Round. The interstitial, once its unit exists,
-   appears before the next countdown and not on top of an in-progress guess.
+8. Finish 4 rounds and tap Next Round. The interstitial appears before the
+   next countdown and not on top of an in-progress guess.
 9. For iOS, replace the App ID in both places above, then archive the Release
    configuration. The built `GADApplicationIdentifier` must be your App ID, not
    `ca-app-pub-3940256099942544~1458002511`.
