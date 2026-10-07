@@ -8,6 +8,7 @@ import '../../core/providers.dart';
 import '../../data/models/game_settings.dart';
 import '../../data/models/game_status.dart';
 import '../../data/repositories/movie_repository.dart';
+import '../../services/ads/interstitial_policy.dart';
 import 'engine/game_engine.dart';
 
 class GameControllerState {
@@ -43,8 +44,9 @@ class GameControllerState {
       errorMessage: clearError ? null : errorMessage ?? this.errorMessage,
       countdown: clearCountdown ? null : countdown ?? this.countdown,
       hintJustUnlocked: hintJustUnlocked ?? this.hintJustUnlocked,
-      adErrorMessage:
-          clearAdError ? null : adErrorMessage ?? this.adErrorMessage,
+      adErrorMessage: clearAdError
+          ? null
+          : adErrorMessage ?? this.adErrorMessage,
       roundsPlayed: roundsPlayed ?? this.roundsPlayed,
     );
   }
@@ -52,8 +54,8 @@ class GameControllerState {
 
 final gameControllerProvider =
     StateNotifierProvider<GameController, GameControllerState>((ref) {
-  return GameController(ref);
-});
+      return GameController(ref);
+    });
 
 class GameController extends StateNotifier<GameControllerState>
     with WidgetsBindingObserver {
@@ -65,6 +67,8 @@ class GameController extends StateNotifier<GameControllerState>
   Timer? _ticker;
   Timer? _countdownTimer;
   bool _skipNextInterstitial = false;
+  int _roundsSinceInterstitial = 0;
+  DateTime? _lastInterstitialAt;
 
   GameEngine get _engine => _ref.read(gameEngineProvider);
   MovieRepository get _movies => _ref.read(movieRepositoryProvider);
@@ -93,18 +97,36 @@ class GameController extends StateNotifier<GameControllerState>
     _ticker?.cancel();
     _countdownTimer?.cancel();
 
-    final shouldShowInterstitial = fromNextRound &&
-        !_skipNextInterstitial &&
-        state.roundsPlayed > 0 &&
-        state.roundsPlayed % AppConstants.interstitialEveryNRounds == 0;
-    if (shouldShowInterstitial) {
-      final ads = _ref.read(adsServiceProvider);
-      state = state.copyWith(
-        session: state.session?.copyWith(status: GameStatus.adLoading),
-      );
-      await ads.showInterstitial();
+    if (fromNextRound && !_roundInProgress) {
+      final skip = _skipNextInterstitial;
+      _skipNextInterstitial = false;
+      if (skip) {
+        // A rewarded extra life just played. Don't stack an interstitial
+        // on the next round, and start the frequency cap over.
+        _roundsSinceInterstitial = 0;
+      } else {
+        _roundsSinceInterstitial += 1;
+        final showAd = InterstitialPolicy.shouldShow(
+          roundsSinceLast: _roundsSinceInterstitial,
+          everyNRounds: AppConstants.interstitialEveryNRounds,
+          lastShownAt: _lastInterstitialAt,
+          now: DateTime.now(),
+          minInterval: AppConstants.interstitialMinInterval,
+          duringGameplay: false,
+        );
+        if (showAd) {
+          final ads = _ref.read(adsServiceProvider);
+          state = state.copyWith(
+            session: state.session?.copyWith(status: GameStatus.adLoading),
+          );
+          final shown = await ads.showInterstitial();
+          if (shown) {
+            _roundsSinceInterstitial = 0;
+            _lastInterstitialAt = DateTime.now();
+          }
+        }
+      }
     }
-    _skipNextInterstitial = false;
 
     final all = await _movies.loadMovies();
     final settings = _settings;
@@ -256,16 +278,16 @@ class GameController extends StateNotifier<GameControllerState>
 
   Future<void> _onLose() async {
     final settings = _settings;
-    await _ref.read(feedbackServiceProvider).lose(
-          sound: settings.soundEnabled,
-          haptics: settings.hapticsEnabled,
-        );
+    await _ref
+        .read(feedbackServiceProvider)
+        .lose(sound: settings.soundEnabled, haptics: settings.hapticsEnabled);
   }
 
   void pause() {
     final session = state.session;
     if (session == null) return;
-    if (!session.status.allowsGuesses && session.status != GameStatus.hintOpen) {
+    if (!session.status.allowsGuesses &&
+        session.status != GameStatus.hintOpen) {
       return;
     }
     _ticker?.cancel();
@@ -339,6 +361,17 @@ class GameController extends StateNotifier<GameControllerState>
 
   void clearAdError() {
     state = state.copyWith(clearAdError: true);
+  }
+
+  bool get _roundInProgress {
+    final status = state.session?.status;
+    if (status == null) return false;
+    return state.countdown != null ||
+        status.allowsGuesses ||
+        status == GameStatus.starting ||
+        status == GameStatus.paused ||
+        status == GameStatus.hintOpen ||
+        status == GameStatus.watchingRewardedAd;
   }
 
   Future<void> nextRound() async {

@@ -146,7 +146,7 @@ Future<void> showPauseDialog(BuildContext context, WidgetRef ref) {
                   ],
                 ),
               );
-              if (ok == true) {
+              if (ok == true && dialogContext.mounted) {
                 Navigator.pop(dialogContext);
                 await ref.read(gameControllerProvider.notifier).startNewRound();
               }

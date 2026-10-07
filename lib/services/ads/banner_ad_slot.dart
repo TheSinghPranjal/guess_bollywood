@@ -1,32 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../../core/constants/app_constants.dart';
+import '../../core/providers.dart';
 import '../../core/theme/app_theme.dart';
 
-/// Anchored adaptive banner. Uses Google sample units in debug/profile and
-/// the production AdMob unit in release. Reserved height avoids layout jump.
-class BannerAdSlot extends StatefulWidget {
+/// Anchored adaptive banner. Debug and profile use Google sample units.
+/// Release uses the production unit. Nothing is requested until UMP consent
+/// allows ads, and a TODO placeholder is never swapped for a sample unit.
+class BannerAdSlot extends ConsumerStatefulWidget {
   const BannerAdSlot({super.key});
 
   @override
-  State<BannerAdSlot> createState() => _BannerAdSlotState();
+  ConsumerState<BannerAdSlot> createState() => _BannerAdSlotState();
 }
 
-class _BannerAdSlotState extends State<BannerAdSlot> {
+class _BannerAdSlotState extends ConsumerState<BannerAdSlot> {
   BannerAd? _banner;
   bool _loaded = false;
+  bool _loadStarted = false;
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    if (_banner == null) {
+    final canRequest = ref.read(consentManagerProvider).canRequestAds;
+    if (canRequest && !_loadStarted) {
+      _loadStarted = true;
       _load();
     }
   }
 
   Future<void> _load() async {
     if (!AppConstants.adsSupported) return;
+    final adUnitId = AppConstants.bannerAdUnitId;
+    if (adUnitId == null) return;
 
     final width = MediaQuery.sizeOf(context).width.truncate();
     AdSize size = AdSize.banner;
@@ -39,7 +47,7 @@ class _BannerAdSlotState extends State<BannerAdSlot> {
     }
 
     final banner = BannerAd(
-      adUnitId: AppConstants.bannerAdUnitId,
+      adUnitId: adUnitId,
       size: size,
       request: const AdRequest(),
       listener: BannerAdListener(
@@ -70,6 +78,11 @@ class _BannerAdSlotState extends State<BannerAdSlot> {
 
   @override
   Widget build(BuildContext context) {
+    final canRequest = ref.watch(consentManagerProvider).canRequestAds;
+    if (!canRequest || AppConstants.bannerAdUnitId == null) {
+      return const SizedBox.shrink();
+    }
+
     final height = _loaded && _banner != null
         ? _banner!.size.height.toDouble()
         : AppConstants.bannerAdHeight;
@@ -85,7 +98,9 @@ class _BannerAdSlotState extends State<BannerAdSlot> {
                 color: AppColors.surface,
                 child: Center(
                   child: Text(
-                    AppConstants.adsSupported ? 'Loading ad…' : 'ADS UNAVAILABLE',
+                    AppConstants.adsSupported
+                        ? 'Loading ad…'
+                        : 'ADS UNAVAILABLE',
                     style: const TextStyle(
                       color: AppColors.textSecondary,
                       fontWeight: FontWeight.w700,

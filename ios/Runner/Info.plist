@@ -27,7 +27,11 @@
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>GADApplicationIdentifier</key>
-    <string>ca-app-pub-3940256099942544~1458002511</string>
+    <string>$(GAD_APPLICATION_ID)</string>
+    <key>GADDelayAppMeasurementInit</key>
+    <true/>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>This identifier is used to show you more relevant ads. You can change this choice later in Settings.</string>
     <key>SKAdNetworkItems</key>
     <array>
         <dict>
