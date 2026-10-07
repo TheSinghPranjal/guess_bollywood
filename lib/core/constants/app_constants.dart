@@ -86,9 +86,8 @@ class AppConstants {
   static const String androidRewardedId =
       'ca-app-pub-8661918790125012/1532740336';
 
-  /// TODO(admob): create an Android interstitial unit and paste it here.
   static const String androidInterstitialId =
-      'ca-app-pub-8661918790125012/TODO_ANDROID_INTERSTITIAL';
+      'ca-app-pub-8661918790125012/5959696196';
 
   /// TODO(admob): create the iOS app in AdMob and paste its App ID here.
   /// Must stay identical to GAD_APPLICATION_ID in ios/Flutter/Release.xcconfig.

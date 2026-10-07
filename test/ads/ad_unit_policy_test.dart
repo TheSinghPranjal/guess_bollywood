@@ -27,48 +27,75 @@ void main() {
     );
   });
 
-  test('release resolver uses real Android banner and rewarded units', () {
-    expect(
-      AppConstants.resolveAdUnit(
-        useTestAds: false,
-        productionId: AppConstants.androidBannerId,
-        testId: AppConstants.androidBannerTestId,
-      ),
-      'ca-app-pub-8661918790125012/2909023888',
-    );
-    expect(
-      AppConstants.resolveAdUnit(
-        useTestAds: false,
-        productionId: AppConstants.androidRewardedId,
-        testId: AppConstants.androidRewardedTestId,
-      ),
-      'ca-app-pub-8661918790125012/1532740336',
-    );
-    expect(AppConstants.androidAppId, 'ca-app-pub-8661918790125012~8544493942');
-    expect(
-      AppConstants.isPlaceholderAdId(AppConstants.androidBannerId),
-      isFalse,
-    );
-    expect(
-      AppConstants.isPlaceholderAdId(AppConstants.androidRewardedId),
-      isFalse,
-    );
-  });
+  test(
+    'release resolver uses real Android banner, rewarded, and interstitial units',
+    () {
+      expect(
+        AppConstants.resolveAdUnit(
+          useTestAds: false,
+          productionId: AppConstants.androidBannerId,
+          testId: AppConstants.androidBannerTestId,
+        ),
+        'ca-app-pub-8661918790125012/2909023888',
+      );
+      expect(
+        AppConstants.resolveAdUnit(
+          useTestAds: false,
+          productionId: AppConstants.androidRewardedId,
+          testId: AppConstants.androidRewardedTestId,
+        ),
+        'ca-app-pub-8661918790125012/1532740336',
+      );
+      expect(
+        AppConstants.resolveAdUnit(
+          useTestAds: false,
+          productionId: AppConstants.androidInterstitialId,
+          testId: AppConstants.androidInterstitialTestId,
+        ),
+        'ca-app-pub-8661918790125012/5959696196',
+      );
+      expect(
+        AppConstants.androidAppId,
+        'ca-app-pub-8661918790125012~8544493942',
+      );
+      expect(
+        AppConstants.isPlaceholderAdId(AppConstants.androidBannerId),
+        isFalse,
+      );
+      expect(
+        AppConstants.isPlaceholderAdId(AppConstants.androidRewardedId),
+        isFalse,
+      );
+      expect(
+        AppConstants.isPlaceholderAdId(AppConstants.androidInterstitialId),
+        isFalse,
+      );
+      expect(
+        AppConstants.isGoogleSampleAdId(AppConstants.androidInterstitialId),
+        isFalse,
+      );
+    },
+  );
 
-  test('release resolver does not request TODO placeholders or sample ids', () {
-    expect(
-      AppConstants.androidInterstitialId,
-      contains('TODO_ANDROID_INTERSTITIAL'),
-    );
+  test('iOS TODO placeholders do not block the Android release units', () {
+    expect(AppConstants.productionAdIds.where(AppConstants.isPlaceholderAdId), [
+      AppConstants.iosAppId,
+      AppConstants.iosBannerId,
+      AppConstants.iosInterstitialId,
+      AppConstants.iosRewardedId,
+    ]);
+    AppConstants.guardReleaseAdUnits();
     expect(
       AppConstants.resolveAdUnit(
         useTestAds: false,
         productionId: AppConstants.androidInterstitialId,
         testId: AppConstants.androidInterstitialTestId,
       ),
-      isNull,
+      isNotNull,
     );
+  });
 
+  test('release resolver does not request TODO placeholders or sample ids', () {
     for (final id in [
       AppConstants.iosBannerId,
       AppConstants.iosInterstitialId,
@@ -134,7 +161,7 @@ void main() {
     expect(manifest, isNot(contains(AppConstants.googleSamplePublisherId)));
     expect(
       File('pubspec.yaml').readAsStringSync(),
-      contains('version: 1.1.0+4'),
+      contains('version: 1.1.0+5'),
     );
   });
 }
